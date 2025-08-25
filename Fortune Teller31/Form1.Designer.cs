@@ -38,8 +38,15 @@
             this.tbShowResult = new System.Windows.Forms.Button();
             this.tbResult = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.파일ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.도움말ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.상담내역불러오기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.끝내기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.포춘텔러정보ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -70,7 +77,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(70, 113);
+            this.label1.Location = new System.Drawing.Point(70, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(205, 12);
             this.label1.TabIndex = 0;
@@ -80,7 +87,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 243);
+            this.label2.Location = new System.Drawing.Point(41, 201);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(275, 12);
             this.label2.TabIndex = 1;
@@ -89,21 +96,21 @@
             // 
             // tbBrithday
             // 
-            this.tbBrithday.Location = new System.Drawing.Point(43, 128);
+            this.tbBrithday.Location = new System.Drawing.Point(43, 86);
             this.tbBrithday.Name = "tbBrithday";
             this.tbBrithday.Size = new System.Drawing.Size(273, 21);
             this.tbBrithday.TabIndex = 2;
             // 
             // tbBrithtime
             // 
-            this.tbBrithtime.Location = new System.Drawing.Point(45, 258);
+            this.tbBrithtime.Location = new System.Drawing.Point(45, 216);
             this.tbBrithtime.Name = "tbBrithtime";
             this.tbBrithtime.Size = new System.Drawing.Size(271, 21);
             this.tbBrithtime.TabIndex = 3;
             // 
             // tbShowResult
             // 
-            this.tbShowResult.Location = new System.Drawing.Point(72, 315);
+            this.tbShowResult.Location = new System.Drawing.Point(72, 273);
             this.tbShowResult.Name = "tbShowResult";
             this.tbShowResult.Size = new System.Drawing.Size(203, 58);
             this.tbShowResult.TabIndex = 4;
@@ -112,10 +119,10 @@
             // 
             // tbResult
             // 
-            this.tbResult.Location = new System.Drawing.Point(0, 44);
+            this.tbResult.Location = new System.Drawing.Point(0, 20);
             this.tbResult.Multiline = true;
             this.tbResult.Name = "tbResult";
-            this.tbResult.Size = new System.Drawing.Size(420, 382);
+            this.tbResult.Size = new System.Drawing.Size(420, 406);
             this.tbResult.TabIndex = 0;
             // 
             // contextMenuStrip1
@@ -123,20 +130,77 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.파일ToolStripMenuItem,
+            this.도움말ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // 파일ToolStripMenuItem
+            // 
+            this.파일ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.상담내역불러오기ToolStripMenuItem,
+            this.끝내기ToolStripMenuItem});
+            this.파일ToolStripMenuItem.Name = "파일ToolStripMenuItem";
+            this.파일ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.파일ToolStripMenuItem.Text = "파일";
+            // 
+            // 도움말ToolStripMenuItem
+            // 
+            this.도움말ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.포춘텔러정보ToolStripMenuItem});
+            this.도움말ToolStripMenuItem.Name = "도움말ToolStripMenuItem";
+            this.도움말ToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.도움말ToolStripMenuItem.Text = "도움말";
+            // 
+            // 상담내역불러오기ToolStripMenuItem
+            // 
+            this.상담내역불러오기ToolStripMenuItem.Name = "상담내역불러오기ToolStripMenuItem";
+            this.상담내역불러오기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.상담내역불러오기ToolStripMenuItem.Text = "내역 불러오기";
+            this.상담내역불러오기ToolStripMenuItem.Click += new System.EventHandler(this.상담내역불러오기ToolStripMenuItem_Click);
+            // 
+            // 끝내기ToolStripMenuItem
+            // 
+            this.끝내기ToolStripMenuItem.Name = "끝내기ToolStripMenuItem";
+            this.끝내기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.끝내기ToolStripMenuItem.Text = "끝내기";
+            this.끝내기ToolStripMenuItem.Click += new System.EventHandler(this.끝내기ToolStripMenuItem_Click);
+            // 
+            // 포춘텔러정보ToolStripMenuItem
+            // 
+            this.포춘텔러정보ToolStripMenuItem.Name = "포춘텔러정보ToolStripMenuItem";
+            this.포춘텔러정보ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.포춘텔러정보ToolStripMenuItem.Text = "포춘텔러 정보";
+            this.포춘텔러정보ToolStripMenuItem.Click += new System.EventHandler(this.포춘텔러정보ToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "포춘텔";
+            this.Text = "포춘텔러(3109윤예지)";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -151,6 +215,12 @@
         private System.Windows.Forms.Button tbShowResult;
         private System.Windows.Forms.TextBox tbResult;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 파일ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 도움말ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 상담내역불러오기ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 끝내기ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 포춘텔러정보ToolStripMenuItem;
     }
 }
 

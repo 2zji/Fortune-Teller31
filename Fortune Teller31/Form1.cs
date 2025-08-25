@@ -31,5 +31,30 @@ namespace Fortune_Teller31
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 상단내역불러오기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 포춘텔러정보ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 상담내역불러오기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void 끝내기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
