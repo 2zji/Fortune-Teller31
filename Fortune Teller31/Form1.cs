@@ -26,5 +26,10 @@ namespace Fortune_Teller31
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
