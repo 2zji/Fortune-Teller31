@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,34 @@ namespace Fortune_Teller31
         public Form1()
         {
             InitializeComponent();
+            LoadResults();
+        }
+
+        private void LoadResults()
+        {
+            try
+            {
+                string filename = 'results.csv';
+                results = File.ReadAllLines(filename).ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"결과 파일을 불러오는 중 오류가 발생했습니다: {ex.Message}", "알 수 없는 오류");
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (FileNotFoundException ex)
+            {
+                MessageBox.Show($"파일이 없어요.\n{ex.Message}", "파일이 없는 오류");
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                MessageBox.Show($"권한이 없어요.\n{ex.Message}", "권한이 없는 오류");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"알 수 없는 오류가 발생했습니다..\n{ex.Message}", "알 수 없는 오류");
+            }
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
