@@ -70,6 +70,16 @@ namespace Fortune_Teller31
             FormAbout form = new FormAbout();
             form.ShowDialog();
         }
+        public void btnShowResult_Click(object sender, EventArgs e)
+        {
+            string birthday = tbBirthday.Text;
+            string birthtime = tbBrithtime.Text;
+            string result = GetFortune();
+            string saju = result.Split('|')[0];
+            string message = result.Split('|')[1];
+            tbResult.Text = birthday + "" + birthtime + Environment.NewLine
+                + saju + Environment.NewLine + message;
+        }
 
         private void 상담내역불러오기ToolStripMenuItem_Click(object sender, EventArgs e)
         {
