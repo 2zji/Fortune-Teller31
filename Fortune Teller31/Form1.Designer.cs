@@ -30,19 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbBrithday = new System.Windows.Forms.TextBox();
-            this.tbBrithtime = new System.Windows.Forms.TextBox();
             this.tbShowResult = new System.Windows.Forms.Button();
+            this.tbBrithtime = new System.Windows.Forms.TextBox();
+            this.tbBirthday = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tbResult = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.파일ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.도움말ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.상담내역불러오기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.끝내기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.도움말ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.포춘텔러정보ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -53,7 +53,7 @@
             // 
             this.groupBox1.Controls.Add(this.tbShowResult);
             this.groupBox1.Controls.Add(this.tbBrithtime);
-            this.groupBox1.Controls.Add(this.tbBrithday);
+            this.groupBox1.Controls.Add(this.tbBirthday);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 32);
@@ -64,25 +64,28 @@
             this.groupBox1.Text = "사용자 입력";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // groupBox2
+            // tbShowResult
             // 
-            this.groupBox2.Controls.Add(this.tbResult);
-            this.groupBox2.Location = new System.Drawing.Point(368, 32);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(420, 406);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "사주 결과";
+            this.tbShowResult.Location = new System.Drawing.Point(72, 273);
+            this.tbShowResult.Name = "tbShowResult";
+            this.tbShowResult.Size = new System.Drawing.Size(203, 58);
+            this.tbShowResult.TabIndex = 4;
+            this.tbShowResult.Text = "사용자 결과 보기";
+            this.tbShowResult.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // tbBrithtime
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(70, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(205, 12);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "생년월일을 입력하세요(ex:20010101)";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.tbBrithtime.Location = new System.Drawing.Point(45, 216);
+            this.tbBrithtime.Name = "tbBrithtime";
+            this.tbBrithtime.Size = new System.Drawing.Size(271, 21);
+            this.tbBrithtime.TabIndex = 3;
+            // 
+            // tbBirthday
+            // 
+            this.tbBirthday.Location = new System.Drawing.Point(43, 86);
+            this.tbBirthday.Name = "tbBirthday";
+            this.tbBirthday.Size = new System.Drawing.Size(273, 21);
+            this.tbBirthday.TabIndex = 2;
             // 
             // label2
             // 
@@ -94,28 +97,25 @@
             this.label2.Text = "태어난 시각을 입력하세요(ex: 13시 04분 -> 1304)";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // tbBrithday
+            // label1
             // 
-            this.tbBrithday.Location = new System.Drawing.Point(43, 86);
-            this.tbBrithday.Name = "tbBrithday";
-            this.tbBrithday.Size = new System.Drawing.Size(273, 21);
-            this.tbBrithday.TabIndex = 2;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(70, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(205, 12);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "생년월일을 입력하세요(ex:20010101)";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // tbBrithtime
+            // groupBox2
             // 
-            this.tbBrithtime.Location = new System.Drawing.Point(45, 216);
-            this.tbBrithtime.Name = "tbBrithtime";
-            this.tbBrithtime.Size = new System.Drawing.Size(271, 21);
-            this.tbBrithtime.TabIndex = 3;
-            // 
-            // tbShowResult
-            // 
-            this.tbShowResult.Location = new System.Drawing.Point(72, 273);
-            this.tbShowResult.Name = "tbShowResult";
-            this.tbShowResult.Size = new System.Drawing.Size(203, 58);
-            this.tbShowResult.TabIndex = 4;
-            this.tbShowResult.Text = "사용자 결과 보기";
-            this.tbShowResult.UseVisualStyleBackColor = true;
+            this.groupBox2.Controls.Add(this.tbResult);
+            this.groupBox2.Location = new System.Drawing.Point(368, 32);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(420, 406);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "사주 결과";
             // 
             // tbResult
             // 
@@ -150,6 +150,20 @@
             this.파일ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.파일ToolStripMenuItem.Text = "파일";
             // 
+            // 상담내역불러오기ToolStripMenuItem
+            // 
+            this.상담내역불러오기ToolStripMenuItem.Name = "상담내역불러오기ToolStripMenuItem";
+            this.상담내역불러오기ToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.상담내역불러오기ToolStripMenuItem.Text = "내역 불러오기";
+            this.상담내역불러오기ToolStripMenuItem.Click += new System.EventHandler(this.상담내역불러오기ToolStripMenuItem_Click);
+            // 
+            // 끝내기ToolStripMenuItem
+            // 
+            this.끝내기ToolStripMenuItem.Name = "끝내기ToolStripMenuItem";
+            this.끝내기ToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.끝내기ToolStripMenuItem.Text = "끝내기";
+            this.끝내기ToolStripMenuItem.Click += new System.EventHandler(this.끝내기ToolStripMenuItem_Click);
+            // 
             // 도움말ToolStripMenuItem
             // 
             this.도움말ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -158,24 +172,10 @@
             this.도움말ToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.도움말ToolStripMenuItem.Text = "도움말";
             // 
-            // 상담내역불러오기ToolStripMenuItem
-            // 
-            this.상담내역불러오기ToolStripMenuItem.Name = "상담내역불러오기ToolStripMenuItem";
-            this.상담내역불러오기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.상담내역불러오기ToolStripMenuItem.Text = "내역 불러오기";
-            this.상담내역불러오기ToolStripMenuItem.Click += new System.EventHandler(this.상담내역불러오기ToolStripMenuItem_Click);
-            // 
-            // 끝내기ToolStripMenuItem
-            // 
-            this.끝내기ToolStripMenuItem.Name = "끝내기ToolStripMenuItem";
-            this.끝내기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.끝내기ToolStripMenuItem.Text = "끝내기";
-            this.끝내기ToolStripMenuItem.Click += new System.EventHandler(this.끝내기ToolStripMenuItem_Click);
-            // 
             // 포춘텔러정보ToolStripMenuItem
             // 
             this.포춘텔러정보ToolStripMenuItem.Name = "포춘텔러정보ToolStripMenuItem";
-            this.포춘텔러정보ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.포춘텔러정보ToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.포춘텔러정보ToolStripMenuItem.Text = "포춘텔러 정보";
             this.포춘텔러정보ToolStripMenuItem.Click += new System.EventHandler(this.포춘텔러정보ToolStripMenuItem_Click);
             // 
@@ -210,7 +210,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbBrithtime;
-        private System.Windows.Forms.TextBox tbBrithday;
+        private System.Windows.Forms.TextBox tbBirthday;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button tbShowResult;
         private System.Windows.Forms.TextBox tbResult;
