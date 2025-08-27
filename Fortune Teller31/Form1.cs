@@ -24,28 +24,26 @@ namespace Fortune_Teller31
         {
             try
             {
-                string filename = 'results.csv';
+                string filename = "results.csv";
                 results = File.ReadAllLines(filename).ToList();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"결과 파일을 불러오는 중 오류가 발생했습니다: {ex.Message}", "알 수 없는 오류");
-                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (FileNotFoundException ex)
             {
-                MessageBox.Show($"파일이 없어요.\n{ex.Message}", "파일이 없는 오류");
+                MessageBox.Show($"파일이 없어요.\n{ex.Message}", "파일이 없는 오류",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (UnauthorizedAccessException ex)
             {
-                MessageBox.Show($"권한이 없어요.\n{ex.Message}", "권한이 없는 오류");
+                MessageBox.Show($"권한이 없어요.\n{ex.Message}", "권한이 없는 오류",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"알 수 없는 오류가 발생했습니다..\n{ex.Message}", "알 수 없는 오류");
+                MessageBox.Show($"알 수 없는 오류가 발생했습니다..\n{ex.Message}", "알 수 없는 오류",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
+
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -75,7 +73,7 @@ namespace Fortune_Teller31
 
         private void 상담내역불러오기ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormHistory form = Application.OpenForms("FormHistory") as FormHistory;
+            FormHistory form = Application.OpenForms["FormHistory"] as FormHistory;
             if(form == null)
             {
                 form.Activate();
@@ -85,6 +83,13 @@ namespace Fortune_Teller31
                 form = new FormHistory(this);
                 form.Show();
             }
+        }
+
+        private string GetFortune()
+        {
+            Random rand = new Random();
+            int index = rand.Next(0, results.Count);
+            return results[index];
         }
 
         private void 끝내기ToolStripMenuItem_Click(object sender, EventArgs e)
